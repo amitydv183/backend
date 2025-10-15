@@ -4,9 +4,8 @@ const web = require('./routes/web');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 const fileupload = require('express-fileupload');
-//require('dotenv').config();
+require('dotenv').config();
 
-const port = 3000;
 const app = express();
 
 app.use(express.json());
@@ -26,4 +25,4 @@ app.use(fileupload({
 app.use('/api', web);
 db();
 
-app.listen(port, () => console.log("Server running at port 3000"));
+app.listen(process.env.PORT, () => console.log("Server running "));
