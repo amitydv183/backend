@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: "https://front-j9vn.onrender.com",
+    origin: "https://petcarelog.netlify.app/",
     credentials: true,
   })
 );
